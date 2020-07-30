@@ -1,6 +1,7 @@
 import React from 'react';
 import { prettyDOM } from '@testing-library/react';
 import Product from '../Product/Product';
+import { NavLink, Link } from 'react-router-dom';
 
 const Cart = (props) => {
     const cart = props.cart;
@@ -38,7 +39,10 @@ const Cart = (props) => {
            <p><small>Shipping Cost: {shipping}</small></p>
            <p><small>Tax + VAT: {tax}</small></p>
            <p>Total Price: {grandTotal}</p>
-           <p></p>
+           <br/>
+           <Link to="/review">
+                <button className="main-button">Review Order</button>
+           </Link>
         </div>
     );
 };
